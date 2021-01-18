@@ -25,7 +25,7 @@ def index():
 
     todos = Todo.query.all()
 
-    return render_template('index.html',title = 'FLASK APPLICATION',todos = todos)
+    return render_template('index.html',title = 'TO DO',todos = todos)
 
 @app.route('/add/',methods=['POST'])
 def add():
@@ -64,7 +64,7 @@ def update(id):
         return redirect('/')
     else:
         todos = Todo.query.all()
-        return render_template('index.html',update_todo=todo,title = 'FLASK APPLICATION',todos = todos)
+        return render_template('index.html',update_todo=todo,title = 'TO DO',todos = todos)
 
 
 
